@@ -57,12 +57,13 @@ const Input = styled.input`
 `;
 
 const SubmitButton = styled.button`
-  width: 100%;
+width: 50%;
   padding: 12px;
   font-size: 16px;
   color: #fff;
   background-color: #3f51b5;
   border: none;
+  margin: 1%;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease-in;
@@ -94,6 +95,23 @@ const Description = styled.p`
   line-height: 1.6;
 `;
 
+const BackButton = styled.button`
+ width: 50%;
+  padding: 12px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f0f0f0;
+  border: none;
+  margin: 1%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in;
+
+  &:hover {
+    background-color: #2c387e;
+  }
+`;
+
 export const RegisterStudent = () => {
   // State management for form fields
   const [formData, setFormData] = useState({
@@ -119,6 +137,9 @@ export const RegisterStudent = () => {
 
   const navigate=useNavigate();
 
+  const openBatchDetailsPage = () => {
+    navigate("/newBatch");
+};
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -151,6 +172,7 @@ export const RegisterStudent = () => {
   return (
     <FormContainer>
       <StyledForm onSubmit={handleSubmit}>
+      
         <FormTitle>Contact Form</FormTitle>
 
         <Description>
@@ -186,9 +208,13 @@ export const RegisterStudent = () => {
         </FormField>
 
         <SubmitButton type="submit">Submit</SubmitButton>
+        <BackButton onClick={openBatchDetailsPage}>Back</BackButton>
+        
 
         {success && <SuccessMessage>Form submitted successfully!</SuccessMessage>}
+        
       </StyledForm>
+      
     </FormContainer>
   );
 };

@@ -189,7 +189,7 @@ const HomePage = () => {
           </Course>
         </div>
       </CoursesSection>
-      <TestimonialsSection>
+      {/* <TestimonialsSection>
         <h2>What Our Students Say</h2>
         <Testimonial>
           "Telugu Techies has transformed my understanding of programming. Highly recommend!"
@@ -197,7 +197,7 @@ const HomePage = () => {
         <Testimonial>
           "The courses are well-structured and the support from instructors is excellent!"
         </Testimonial>
-      </TestimonialsSection>
+      </TestimonialsSection> */}
       <Footer>
         <p>&copy; 2024 Telugu Techies. All Rights Reserved.</p>
       </Footer>

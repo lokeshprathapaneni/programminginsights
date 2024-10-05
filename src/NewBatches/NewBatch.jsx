@@ -63,26 +63,13 @@ export const NewBatches = () => {
 
     const batchDetails = [
         {
-          courseName: "Full-Stack Web Development",
-          duration: "6 months",
+          courseName: "Core Java",
+          duration: "2 Months",
           date: "15th Oct 2024",
-          time: "10:00 AM - 12:00 PM",
-          registrationLink: "/register"
-        },
-        {
-          courseName: "Data Science with Python",
-          duration: "4 months",
-          date: "1st Nov 2024",
-          time: "2:00 PM - 4:00 PM",
-          registrationLink: "/register"
-        },
-        {
-          courseName: "UI/UX Design Fundamentals",
-          duration: "3 months",
-          date: "20th Oct 2024",
-          time: "11:00 AM - 1:00 PM",
+          time: "6:30 AM-7:30 AM(1hr daily)",
           registrationLink: "/register"
         }
+    
       ];
       
 
@@ -106,24 +93,33 @@ export const NewBatches = () => {
         <thead>
           <TableRow>
             <TableHeader>Course Name</TableHeader>
-            <TableHeader>Duration</TableHeader>
-            <TableHeader>Date</TableHeader>
-            <TableHeader>Time</TableHeader>
             <TableHeader>Registration</TableHeader>
+            <TableHeader>Course Syllabus</TableHeader>
+            <TableHeader>Batch Start Date</TableHeader>
+            <TableHeader>Timings</TableHeader>
+            <TableHeader>Registration</TableHeader>
+            <TableHeader>Duration</TableHeader>
           </TableRow>
         </thead>
         <tbody>
           {batchDetails.map((batch, index) => (
             <TableRow key={index}>
               <TableData>{batch.courseName}</TableData>
-              <TableData>{batch.duration}</TableData>
-              <TableData>{batch.date}</TableData>
-              <TableData>{batch.time}</TableData>
               <TableData>
                 <RegistrationLink to="/registerStudent">
                   Register
                 </RegistrationLink>
               </TableData>
+              <TableData>
+                <RegistrationLink to="/syllabus">
+                  Java Syllabus
+                </RegistrationLink>
+              </TableData>
+              
+              <TableData>{batch.date}</TableData>
+              <TableData>{batch.time}</TableData>
+              <TableData>{batch.duration}</TableData>
+           
             </TableRow>
           ))}
         </tbody>
