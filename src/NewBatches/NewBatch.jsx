@@ -1,5 +1,7 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const TableWrapper = styled.div`
   width: 100%;
@@ -33,13 +35,27 @@ const TableData = styled.td`
   border-bottom: 1px solid #ddd;
 `;
 
-const RegistrationLink = styled.a`
+const RegistrationLink = styled(Link)`
   color: #3498db;
   text-decoration: none;
   font-weight: bold;
   
   &:hover {
     text-decoration: underline;
+  }
+`;
+
+
+const BackButton = styled.button`
+  background-color: #3b82f6; /* Blue */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #2563eb; /* Darker Blue */
   }
 `;
 
@@ -69,9 +85,22 @@ export const NewBatches = () => {
         }
       ];
       
+
+      const navigate = useNavigate(); // useNavigate hook to navigate to a route
+
+      const openHomePage = () => {
+        // Navigate to the route to load MyComponent
+        navigate("/");
+      };
+
+      const registerStudentPage = () => {
+        // Navigate to the route to load MyComponent
+        navigate("/registerStudent");
+      };
       
       
   return (
+    <>
     <TableWrapper>
       <StyledTable>
         <thead>
@@ -91,7 +120,7 @@ export const NewBatches = () => {
               <TableData>{batch.date}</TableData>
               <TableData>{batch.time}</TableData>
               <TableData>
-                <RegistrationLink href={batch.registrationLink} target="_blank">
+                <RegistrationLink to="/registerStudent" target="_blank">
                   Register
                 </RegistrationLink>
               </TableData>
@@ -99,7 +128,10 @@ export const NewBatches = () => {
           ))}
         </tbody>
       </StyledTable>
+      
     </TableWrapper>
+    <BackButton onClick={openHomePage}>Back to Home</BackButton>
+    </>
   );
 };
 

@@ -1,5 +1,6 @@
 // src/HomePage.js
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 // Navbar Component
@@ -137,6 +138,13 @@ const Footer = styled.footer`
 `;
 
 const HomePage = () => {
+
+    const navigate = useNavigate(); // useNavigate hook to navigate to a route
+
+    const openNewBatch = () => {
+      // Navigate to the route to load MyComponent
+      navigate("/newBatch");
+    };
   return (
     <Container>
       <NavbarContainer>
@@ -151,7 +159,7 @@ const HomePage = () => {
               <DropdownLink href="#data-structures">Data Structures</DropdownLink>
             </Dropdown>
           </NavbarLink>
-          <NextBatchButton >New Batch</NextBatchButton>
+          <NextBatchButton onClick={openNewBatch}>New Batch</NextBatchButton>
         </NavbarLinks>
       </NavbarContainer>
       <HeroSection>
