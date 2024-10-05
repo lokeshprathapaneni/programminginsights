@@ -120,7 +120,7 @@ export const NewBatches = () => {
               <TableData>{batch.date}</TableData>
               <TableData>{batch.time}</TableData>
               <TableData>
-                <RegistrationLink to="/registerStudent" target="_blank">
+                <RegistrationLink to="/registerStudent">
                   Register
                 </RegistrationLink>
               </TableData>

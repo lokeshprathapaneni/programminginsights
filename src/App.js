@@ -14,6 +14,7 @@ function App() {
   <Route path="/" element={<HomePage />}></Route>
   <Route path="/newBatch" element={<NewBatches />}></Route>
   <Route path="/registerStudent" element={<RegisterStudent />}></Route>
+  
 </Routes>
 </BrowserRouter>
   );
