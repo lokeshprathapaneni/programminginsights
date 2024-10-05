@@ -117,18 +117,6 @@ const CourseDescription = styled.p`
   color: #555;
 `;
 
-const TestimonialsSection = styled.section`
-  padding: 40px;
-  text-align: center;
-`;
-
-const Testimonial = styled.blockquote`
-  font-style: italic;
-  margin: 20px;
-  padding: 20px;
-  border-left: 5px solid #1e3a8a;
-  background-color: #f0f9ff; /* Light Blue */
-`;
 
 const Footer = styled.footer`
   background-color: #1e3a8a; /* Dark Blue */
