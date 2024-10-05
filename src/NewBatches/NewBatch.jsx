@@ -93,10 +93,10 @@ export const NewBatches = () => {
         navigate("/");
       };
 
-      const registerStudentPage = () => {
-        // Navigate to the route to load MyComponent
-        navigate("/registerStudent");
-      };
+    //   const registerStudentPage = () => {
+    //     // Navigate to the route to load MyComponent
+    //     navigate("/registerStudent");
+    //   };
       
       
   return (
