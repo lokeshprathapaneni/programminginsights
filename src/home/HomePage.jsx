@@ -67,12 +67,12 @@ const Container = styled.div`
   color: #333;
 `;
 
-const Header = styled.header`
-  background-color: #1e3a8a; /* Dark Blue */
-  padding: 20px;
-  text-align: center;
-  color: white;
-`;
+// const Header = styled.header`
+//   background-color: #1e3a8a; /* Dark Blue */
+//   padding: 20px;
+//   text-align: center;
+//   color: white;
+// `;
 
 const HeroSection = styled.section`
   background: url('https://source.unsplash.com/random/1600x900/?technology') no-repeat center center/cover;
